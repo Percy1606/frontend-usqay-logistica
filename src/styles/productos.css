@@ -1,0 +1,324 @@
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
+.dashboard-container {
+  padding: 24px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* ===========================
+   ENCABEZADO
+=========================== */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.badge {
+  background-color: #e0e0e0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #111;
+  font-weight: 500;
+}
+
+/* ===========================
+   BOTONES GENERALES
+=========================== */
+.primary-btn,
+.export-btn,
+.filter-btn,
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.primary-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.export-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+}
+
+.filter-btn {
+  background-color: #f2f2f2;
+  color: #111;
+}
+
+.filter-btn:hover,
+.export-btn:hover,
+.primary-btn:hover,
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ===========================
+   FILTROS Y BUSQUEDA
+=========================== */
+.filters-section {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.search-box {
+  position: relative;
+  width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+}
+
+.search-input,
+.filters-section input,
+.filter-item select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+/* Icono dentro del input */
+.search-box .search-input {
+  padding-left: 35px;
+}
+
+/* Estilo para selects */
+.filter-item select {
+  min-width: 120px;
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='10'%20height='6'%3E%3Cpath%20fill='%23333'%20d='M0%200l5%206%205-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px 6px;
+  padding-right: 30px;
+}
+
+.filter-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+/* ===========================
+   TABLA DE PRODUCTOS
+=========================== */
+.products-table-container {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+.products-table th,
+.products-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.products-table th {
+  background-color: #f9f9f9;
+  font-weight: 500;
+  text-align: left;
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ===========================
+   ETIQUETAS DE STOCK
+=========================== */
+.stock-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.stock-badge.high {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.stock-badge.low {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* ===========================
+   BOTONES DE ACCIONES
+=========================== */
+.actions-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.action-btn.edit { color: #2196F3; }
+.action-btn.delete { color: #f44336; }
+.action-btn.more { color: #757575; }
+
+.action-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===========================
+   MODAL PARA NUEVO PRODUCTO
+=========================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-box h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.modal-box input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* ===========================
+   ETIQUETAS CUSTOM OPCIONAL
+=========================== */
+.etiqueta {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.etiqueta.vip { background-color: #fbc02d; color: #000; }
+.etiqueta.nuevo { background-color: #43a047; }
+.etiqueta.aviso { background-color: #fb8c00; }
+.etiqueta.moroso { background-color: #e53935; }
+.etiqueta.potencial { background-color: #1e88e5; }

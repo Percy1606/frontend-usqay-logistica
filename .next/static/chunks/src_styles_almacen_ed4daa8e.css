@@ -1,0 +1,369 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap";
+/* [project]/src/styles/almacen.css [app-client] (css) */
+html, body {
+  color: #1f2937;
+  background-color: #f1f5f9;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Segoe UI, sans-serif;
+}
+
+.dashboard-wrapper {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.dashboard-content {
+  background-color: #f9fafb;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  padding: 1.5rem 2rem;
+  display: flex;
+  overflow-y: auto;
+}
+
+.ventas-container {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  box-shadow: 0 1px 6px #0000000d;
+}
+
+.ventas-header {
+  margin-bottom: 1.5rem;
+}
+
+.ventas-header h1 {
+  align-items: center;
+  gap: 8px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.ventas-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+nav {
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.tab-button {
+  color: #374151;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color .15s;
+}
+
+.tab-button:hover {
+  background-color: #e5e7eb;
+}
+
+.tab-active {
+  color: #fff;
+  background-color: #3b82f6;
+}
+
+.modal-trigger-btn.add, .probar-conexion, .guardar-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color .15s;
+}
+
+.modal-trigger-btn.add {
+  color: #fff;
+  background-color: #111827;
+}
+
+.modal-trigger-btn.add:hover {
+  background-color: #1f2937;
+}
+
+.probar-conexion {
+  color: #1f2937;
+  background-color: #f3f4f6;
+}
+
+.probar-conexion:hover {
+  background-color: #e5e7eb;
+}
+
+.guardar-btn {
+  color: #fff;
+  background-color: #111827;
+}
+
+.guardar-btn:hover {
+  background-color: #1f2937;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px #0000000d;
+}
+
+section h2 {
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  display: grid;
+}
+
+.filtro-label {
+  color: #374151;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+}
+
+input, select {
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: border-color .15s, background-color .15s;
+}
+
+input:focus, select:focus {
+  background-color: #fff;
+  border-color: #2563eb;
+  outline: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  width: 100%;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #f3f4f6;
+}
+
+th {
+  text-align: left;
+  color: #4b5563;
+  padding: 12px 16px;
+}
+
+td {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 16px;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.badge-stock {
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-verde {
+  color: #16a34a;
+  background-color: #dcfce7;
+}
+
+.badge-rojo {
+  color: #dc2626;
+  background-color: #fee2e2;
+}
+
+.badge-amarilla {
+  color: #ca8a04;
+  background-color: #fef3c7;
+}
+
+.badge-naranja {
+  color: #c2410c;
+  background-color: #fde68a;
+}
+
+.card-proveedor {
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #0000;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color .15s, box-shadow .15s;
+  box-shadow: 0 2px 6px #0000000d;
+}
+
+.card-proveedor:hover {
+  border-color: #60a5fa;
+}
+
+.card-proveedor.selected {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px #1d4ed8;
+}
+
+.card-proveedor .icono {
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.card-proveedor .nombre {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-proveedor .detalle {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.card-proveedor .etiqueta-seleccionado {
+  color: #fff;
+  background-color: #1d4ed8;
+  border-radius: 9999px;
+  margin-top: .5rem;
+  padding: 4px 12px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.plantilla-item {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+}
+
+.plantilla-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.plantilla-tag {
+  border-radius: 9999px;
+  margin-top: .25rem;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.tag-invoice {
+  color: #2563eb;
+  background-color: #dbeafe;
+}
+
+.tag-reminder {
+  color: #ca8a04;
+  background-color: #fef3c7;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 500;
+  transition: background-color .15s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.cancelar-btn {
+  color: #374151;
+  background-color: #e5e7eb;
+}
+
+.cancelar-btn:hover {
+  background-color: #d1d5db;
+}
+
+.modal-overlay {
+  z-index: 50;
+  background-color: #0006;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  animation: .3s ease-in-out fadeIn;
+  box-shadow: 0 10px 25px #0003;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (width <= 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .tab-button, .modal-trigger-btn.add, .probar-conexion, .guardar-btn {
+    width: 100%;
+  }
+}
+
+
+/*# sourceMappingURL=src_styles_almacen_ed4daa8e.css.map*/

@@ -1,0 +1,355 @@
+/* ====================================================
+   DASHBOARD CSS – Estilos UI moderno (Tipografía Poppins)
+   ==================================================== */
+
+/* === TIPOGRAFÍA Y RESET === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5f9;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #1f2937;
+}
+
+/* === LAYOUT PRINCIPAL === */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 1.5rem 2rem;
+  overflow-y: auto;
+}
+.ventas-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* === ENCABEZADO === */
+.ventas-header {
+  margin-bottom: 1.5rem;
+}
+.ventas-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ventas-header p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* === NAVEGACIÓN DE TABS === */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.tab-button {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 10px 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+.tab-button:hover {
+  background-color: #e5e7eb;
+}
+.tab-active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* === BOTONES PRINCIPALES === */
+.modal-trigger-btn.add,
+.probar-conexion,
+.guardar-btn {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+/* Botón de añadir (negro) */
+.modal-trigger-btn.add {
+  background-color: #111827;
+  color: #ffffff;
+}
+.modal-trigger-btn.add:hover {
+  background-color: #1f2937;
+}
+/* Botón "Probar Conexión" (claro) */
+.probar-conexion {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+.probar-conexion:hover {
+  background-color: #e5e7eb;
+}
+/* Botón Guardar (negro) */
+.guardar-btn {
+  background-color: #111827;
+  color: #ffffff;
+}
+.guardar-btn:hover {
+  background-color: #1f2937;
+}
+
+/* === SECCIÓN GENERAL === */
+section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === FORMULARIOS === */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.filtro-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+  display: block;
+}
+input,
+select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* === TABLAS === */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  font-size: 14px;
+}
+thead {
+  background-color: #f3f4f6;
+}
+th {
+  padding: 12px 16px;
+  text-align: left;
+  color: #4b5563;
+}
+td {
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* === BADGES DE STOCK === */
+.badge-stock {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+.badge-verde {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+.badge-rojo {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+.badge-amarilla {
+  background-color: #fef3c7;
+  color: #ca8a04;
+}
+.badge-naranja {
+  background-color: #fde68a;
+  color: #c2410c;
+}
+
+/* === CARTAS DE PROVEEDORES === */
+.card-proveedor {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.card-proveedor:hover {
+  border-color: #60a5fa;
+}
+.card-proveedor.selected {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px #1d4ed8;
+}
+.card-proveedor .icono {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.card-proveedor .nombre {
+  font-size: 16px;
+  font-weight: 600;
+}
+.card-proveedor .detalle {
+  font-size: 13px;
+  color: #6b7280;
+}
+.card-proveedor .etiqueta-seleccionado {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+/* === PLANTILLAS === */
+.plantilla-item {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.plantilla-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+.plantilla-tag {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+.tag-invoice {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+.tag-reminder {
+  background-color: #fef3c7;
+  color: #ca8a04;
+}
+
+/* === BOTONES GENÉRICOS (AZUL) === */
+button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+button:hover {
+  background-color: #2563eb;
+}
+
+/* === BOTONES DE MODAL SECUNDARIOS === */
+.cancelar-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+.cancelar-btn:hover {
+  background-color: #d1d5db;
+}
+
+/* === MODAL === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+.modal-content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  .tab-button,
+  .modal-trigger-btn.add,
+  .probar-conexion,
+  .guardar-btn {
+    width: 100%;
+  }
+}

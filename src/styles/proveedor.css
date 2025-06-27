@@ -1,0 +1,226 @@
+/* ——— FUENTE GLOBAL ——— */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ——— CONTENEDOR GENERAL ——— */
+.empresas-container {
+  width: 100%;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ——— ENCABEZADO ——— */
+.encabezado-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.titulo-principal {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+.boton-nuevo {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.boton-nuevo:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+/* ——— TABLA DE DATOS ——— */
+.tabla-empresas {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+.tabla-empresas th,
+.tabla-empresas td {
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+.tabla-empresas th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ——— BOTONES DE ACCIÓN ——— */
+.boton-accion {
+  padding: 0.45rem 0.8rem;
+  font-size: 0.83rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.boton-agregar   { background: #000;    color: #fff; }
+.boton-editar    { background: #e5e5e5; color: #111; }
+.boton-eliminar  { background: #ef4444; color: #fff; }
+.boton-accion:hover { opacity: .9; }
+
+/* ——— MODAL BACKDROP ——— */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+  z-index: 1050;
+}
+
+/* ——— CONTENIDO DEL MODAL ——— */
+.modal-content {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn .25s ease-out;
+  margin: 1rem auto;
+}
+@keyframes fadeIn {
+  from { transform: scale(.96); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+/* ——— CABECERA DEL MODAL ——— */
+.modal-header {
+  padding: 1rem 1.5rem;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-titulo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111827;
+}
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+.modal-close:hover { color: #ef4444; }
+
+/* ——— CUERPO DEL MODAL ——— */
+.modal-body {
+  padding: 2rem 2.5rem;
+  max-height: 68vh;
+  overflow-y: auto;
+}
+.formulario-empresa {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+}
+.campo-formulario label {
+  margin-bottom: .35rem;
+  font-size: .94rem;
+  font-weight: 500;
+  color: #374151;
+}
+.campo-formulario input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color .2s;
+}
+.campo-formulario input:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* ——— PIE DEL MODAL ——— */
+.botones-formulario {
+  display: flex;
+  justify-content: flex-end;
+  gap: .8rem;
+  padding: 1rem 1.5rem;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+.boton-form {
+  padding: .6rem 1.3rem;
+  font-size: .9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+/* NEGRO principal */
+.boton-form.negro {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+.boton-form.negro:hover {
+  background: #fff;
+  color: #000;
+}
+/* BLANCO secundario */
+.boton-form.blanco {
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+.boton-form.blanco:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ——— INPUTS EN LA TABLA (opcional edición en línea) ——— */
+.tabla-empresas input {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: .88rem;
+}
+.tabla-empresas input:focus {
+  border-color: #000;
+  outline: none;
+}

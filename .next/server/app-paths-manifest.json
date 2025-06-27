@@ -1,0 +1,10 @@
+{
+  "/dashboard/clientes/page": "app/dashboard/clientes/page.js",
+  "/dashboard/gestion-de-productos/page": "app/dashboard/gestion-de-productos/page.js",
+  "/dashboard/gestion_almacen/page": "app/dashboard/gestion_almacen/page.js",
+  "/dashboard/gestion_servicios/page": "app/dashboard/gestion_servicios/page.js",
+  "/dashboard/gestion_ventas/page": "app/dashboard/gestion_ventas/page.js",
+  "/dashboard/proovedor/page": "app/dashboard/proovedor/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
+}
